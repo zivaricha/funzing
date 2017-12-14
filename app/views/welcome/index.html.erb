@@ -1,2 +1,3 @@
 <h1>Welcome to funzing app</h1>
  <%= link_to "Logout", destroy_user_session_path, class: "btn btn-xs btn-danger", method: :delete %>
+ <%= link_to "Login", new_user_session_path, class: "btn btn-xs btn-success"  unless user_signed_in? %>

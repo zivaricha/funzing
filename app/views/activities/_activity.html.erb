@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-xs-4 activity-box">
+    <div class="well well-lg">
+      <div class="activity-title">
+        <%= link_to activity.title, activity_path(activity)%>
+      </div>
+      <div class="activity-date">
+        <%= activity.date %>
+      </div>
+      <div class="activity-price">
+        <p><%= activity.price %> ILS per ticket</p>
+      </div>
+    </div>
+  </div>
+</div>
