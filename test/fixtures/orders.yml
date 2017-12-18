@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  activity_id: 
+  total_price: 1.5
+  amount_of_tickets: 1
+
+two:
+  user_id: 
+  activity_id: 
+  total_price: 1.5
+  amount_of_tickets: 1

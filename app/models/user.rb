@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   # relations
   has_many :activities
+  has_many :orders
   
 
 end

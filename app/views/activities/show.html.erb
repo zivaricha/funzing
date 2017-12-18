@@ -1,0 +1,30 @@
+<h1 class="center">Activity: <%= @activity.title %></h1>
+
+<div class="row">
+  <div class="col-xs-10 activity-box">
+    <div class="well well-lg">
+      <div class="activity-title">
+        <%= link_to @activity.title, activity_path(@activity)%>
+      </div>
+      <div class="activity-details">
+        <tr>
+          <td><%= @activity.description %></td>
+          <td><%= @activity.user.email  %></td>
+          <td><%= @activity.max_participants %></td>
+        </tr>
+        <p><%= @activity.price %> ILS per ticket</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="booking-section col-xs-2">
+    <%= form_for Order.new do |f| %>
+      <%= f.select :amount_of_tickets, (1..@activity.max_participants)%>
+      <%= f.submit "Submit" %>
+    <% end %>
+  </div>
+</div>
+
+# add show actions
+# continue by instructions
+# think how to implement maximum amount of praticipants
