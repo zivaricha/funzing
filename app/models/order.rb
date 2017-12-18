@@ -7,7 +7,7 @@ class Order < ActiveRecord::Base
   
   def exceed_tickets_limit
     if self.amount_of_tickets > self.activity.amount_of_tickets_left
-      errors.add(:amount_of_tickets, "There is not enough tickets left. please try again")
+      self.errors.add(:amount_of_tickets, "There is not enough tickets left. please try again")
       return false
     end
   end

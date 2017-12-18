@@ -7,5 +7,7 @@ class User < ActiveRecord::Base
   has_many :activities
   has_many :orders
   
+  # validations
+  validates_presence_of :name
 
 end
