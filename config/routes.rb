@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
   resources :activities, only: [:index, :show]
   resources :orders, only: [:new, :create, :show]
+  get 'my_orders', to: 'users#my_orders'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="well col-xs-6">
+    <h3># Order <%= @order.id %></h3>
+    <h2><%=@activity.title %></h2>
+    <hr>
+    <p><%=@activity.user.email %></p>
+    <hr>
+    <p><%= DateTime.now %></p>
+    <p><%= @order.amount_of_tickets%> tickets</p>
+    <p>Total price: שח<%= @order.total_price%></p>
+  </div>
+</div>
