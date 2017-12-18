@@ -23,7 +23,9 @@
     <div class="well">
     <%= form_for Order.new do |f| %>
       <%= hidden_field_tag :activity_id, @activity.id%>
-      <%= f.select :amount_of_tickets, (1..@activity.max_participants) %>
+      <p><%= @activity.date %></p>
+      <p><%= @activity.price %> per ticket </p>
+      <%= f.select :amount_of_tickets, (1..@activity.amount_of_tickets_left) %>
       <%= f.submit "Book now" %>
     <% end %>
     </div>

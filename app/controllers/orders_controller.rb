@@ -5,11 +5,12 @@ class OrdersController < ApplicationController
     @order.user_id = current_user.id if current_user.present?
     @order.activity_id =  @activity.id if @activity.present?
     @order.total_price = @order.amount_of_tickets * @order.activity.price
+    debugger
     if @order.save
       @activity.update_participants_count(@order.amount_of_tickets)
       redirect_to order_path(@order)
     else
-      flash[:danger] = "Something went wrong. please try again."
+      flash[:danger] = @order.errors.full_messages.first 
       redirect_to activity_path(@activity)
     end
   end
