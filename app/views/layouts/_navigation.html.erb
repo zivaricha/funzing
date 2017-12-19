@@ -1,0 +1,31 @@
+<div class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <%= link_to "Mini Funzing", root_path, class: "navbar-brand"%>
+    <div class="navbar-collapse collapse navbar-responsive-collapse">
+      <ul class="nav navbar-nav">
+        <li><%= link_to "Activities", activities_path %></li>
+        <% if user_signed_in? %>
+          <li><%= link_to "My Orders", my_orders_path  %></li>
+        <% end %>
+      </ul>
+      <ul class="nav navbar-right col-md-4">
+        <li class="col-md-8 user-name text-right">
+          <i class="fa fa-user"></i>
+          <%= current_user.present? ? current_user.name : "Anonymous" %>
+        </li>
+        <li class="col-md-4">
+          <% if user_signed_in? %>
+            <%= link_to "Logout", destroy_user_session_path, class: "btn btn-xs logout", method: :delete %>
+          <% else %>
+            <%= link_to "Login", new_user_session_path, class: "btn btn-xs btn-success"  unless user_signed_in? %>
+          <% end %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

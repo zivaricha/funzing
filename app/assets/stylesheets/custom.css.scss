@@ -12,11 +12,12 @@
 }
 .user-name {
   padding-top: 15px;
+  color: white;
 }
 
 .nav.navbar-right li {
   .btn {
-    color: #fff !important;
+    color: black !important;
     margin-top: 5%;
   }
   .btn-danger:hover {
@@ -24,6 +25,16 @@
   }
 }
 
+.navbar {
+  background-color: #B81DF1;
+}
+.navbar-brand, {
+  color: white !important;
+}
+
+.navbar-nav li a {
+   color: white !important;
+}
 
 .form-spacing {
    margin-bottom: 15px;
@@ -48,4 +59,8 @@
 
 .no-padding {
   padding-left: 0px;
+}
+
+.logout {
+  background-color:white;
 }
