@@ -4,7 +4,7 @@ class OrdersController < ApplicationController
     @activity = Activity.find(params[:activity_id])
     @order.user_id = current_user.id if current_user.present?
     @order.activity_id =  @activity.id if @activity.present?
-    @order.total_price = @order.amount_of_tickets * @order.activity.price
+    @order.total_price = @order.amount_of_tickets * @activity.price
     if @order.save
       @activity.update_participants_count(@order.amount_of_tickets)
       redirect_to order_path(@order)

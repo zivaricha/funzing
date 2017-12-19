@@ -23,3 +23,29 @@
     background-color: darken(#d9534f, 20%) !important;
   }
 }
+
+
+.form-spacing {
+   margin-bottom: 15px;
+}
+
+.form-padding {
+  padding-bottom: 20px;
+}
+
+.book-now-btn {
+  display: block;
+  width: 100%;
+  background-color: #B81DF1;
+  color: #ffff;
+  border-color: black;
+  border-radius: 3px;
+}
+
+.listing {
+  list-style-type: none;
+}
+
+.no-padding {
+  padding-left: 0px;
+}

@@ -1,33 +1,20 @@
-<h1 class="center">Activity: <%= @activity.title %></h1>
-
 <div class="row">
-  <div class="col-xs-12 col-sm-9 activity-box">
+  <div class="col-xs-12 col-sm-8 activity-box">
     <div class="well well-lg">
       <div class="activity-title">
-        <%= link_to @activity.title, activity_path(@activity)%>
+        <h1><%= @activity.title %></h1>
+        <hr>
       </div>
       <div class="activity-details">
-        <tr>
-          <td><%= @activity.description %></td>
-          <td><%= @activity.user.email  %></td>
-          <td><%= @activity.max_participants %></td>
-        </tr>
-        <p><%= @activity.price %> ILS per ticket</p>
+        <ul class="listing no-padding">
+          <li><%= @activity.user.name  %></li>
+          <hr>
+          <li><%= @activity.description %></li>
+          <li><%= @activity.max_participants %></i
+        </ul>
       </div>
     </div>
   </div>
   
-  <div class="booking-section col-xs-12 col-sm-3">
-    <div class="well">
-    <%= form_for Order.new do |f| %>
-      <%= hidden_field_tag :activity_id, @activity.id %>
-      <p><%= @activity.date %></p>
-      <div class="price-per-ticket">
-        <%= @activity.price %> per ticket
-      </div>
-      <%= f.select(:amount_of_tickets, (1..@activity.amount_of_tickets_left)) %>
-      <%= f.submit "Book now" %>
-    <% end %>
-    </div>
-  </div>
+  <%= render 'orders/form', activity: @activity %>
 </div>
