@@ -26,7 +26,7 @@
 }
 
 .navbar {
-  background-color: #B81DF1;
+  background-color: #8A05FF;
 }
 .navbar-brand, {
   color: white !important;
@@ -47,7 +47,7 @@
 .book-now-btn {
   display: block;
   width: 100%;
-  background-color: #B81DF1;
+  background-color: #8A05FF;
   color: #ffff;
   border-color: black;
   border-radius: 3px;
@@ -63,4 +63,15 @@
 
 .logout {
   background-color:white;
+}
+
+.line-breaker {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+.activity-title a {
+  color: #8A05FF;
 }
